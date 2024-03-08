@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --darkmode-bg-color: #111215;
+    --darkmode-text-color: #A1A1AA;
+    --lightmode-text-color: #252525;
+    --lightmode-bg-color: #FAFAF8;
+
+    --primary-color: #252525;
+    --second-color: #FAFAF8;
+    --third-color: #F5F5F5;
+    --font-family-primary: "Roboto Mono", monospace;
+    --font-family-secondary: 'Poppins', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: var(--font-family-primary);
+    background-color: var(--darkmode-bg-color);
+    color: var(--darkmode-text-color);
+    line-height: 1.9;
+    padding-bottom: 30px;
+    cursor: default;
+}
+
+hr{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 0;
+    border-top: 1px solid var(--primary-color);
+    opacity: 0.3;
+
+}
+
+
+body h1, h2 {
+    color: var(--second-color);
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.light-mode {
+    background-color: var(--lightmode-bg-color);
+    color: var(--lightmode-text-color) !important;
+}
+
+
+
+.dark-mode {
+    background-color: var(--darkmode-bg-color);
+    color: var(--darkmode-text-color) !important;
+}
+
+#toggler{
+    cursor: pointer;
+    float: right;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: var(--primary-color);
+    color: var(--second-color);
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.mySelfie {
+    border-radius: 50%;
+    
+}
+
+.about-me {
+    margin-top: 50px;
+    font-weight: 350;
+}
+.about-me h1 {
+    font-family: var(--font-family-secondary);
+    font-size: 30px;
+    font-weight: 700;
+
+}
+
+.about-me h3{
+    font-size: 17px;
+}
+
+.live-online{
+
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.online{
+    margin-top: 20px !important;
+}
+
+
+
+.btn-contact{
+    margin-top: 18px;
+    margin-bottom: 30px;
+}
+
+
+.navigation{
+    margin-top: 30px;
+}
+
+.navigation ul {
+    list-style: none;
+}
+
+.navigation ul li {
+    margin-top: 15px;
+    display: inline;
+    margin-right: 30px;
+
+}
+
+.navigation ul li:last-child {
+    margin-right: 30px;
+
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: var(--darkmode-text-color);
+
+}
+
+.project-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.project-links a {
+    margin-top: 20px;
+    text-decoration: none;
+    color: var(--darkmode-text-color);
+}
+
+.navigation ul li a:hover {
+    text-decoration: underline;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.row-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project{
+    width: calc(50% - 10px); /* 10px odečte pro mezery mezi projekty */
+}
+
+.project img {
+    width: 100%;
+    border-radius: 5px;
+    filter: blur(2px);
+}
+
+
+
+.skills ul li::before {
+    content: "\2714"; /* Unicode hodnota pro symbol ✔ */
+    display: inline-block;
+    margin-right: 10px; /* Pokud chcete mezi symbolem a textem místo */
+}
+
+
+.skills ul li:hover::before {
+    color: rgb(91, 239, 91); /* Změna barvy symbolu na zelenou při najetí myší */
+}
+
+
+.skills ul li{
+    display: block;
+
+}
+
+.skills ul li:hover{
+    cursor: default;
+}
+
+
+
+
+
+
+.skills ul {
+    column-count: 2;
+    column-gap: 20px; /* Mezera mezi sloupci */
+    padding: 0; /* Odstanění vnitřního odsazení od seznamu */
+}
+
+#skills-section h2 {
+    margin-bottom: 20px;
+}
+
+
+.social-medias a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: var(--darkmode-text-color);
+
+}
+
+.social-medias a:hover {
+    text-decoration: underline;
+}
+
+
+footer{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .online-blink {
+    animation: blink 1.2s infinite;
+  }
+  
